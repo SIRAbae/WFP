@@ -1,0 +1,203 @@
+﻿<Window x:Class="_1029저녁과제2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        xmlns:local="clr-namespace:_1029저녁과제2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="1330">
+    <Window.Resources>
+        <local:People x:Key="people"/>
+        <local:Account x:Key="account" />
+        <local:Acc_Io x:Key="acc_io"/>
+        <local:Acc_list x:Key="acc_list"/>
+    </Window.Resources>
+    <StackPanel>
+        <Grid Background="YellowGreen">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <!--왼쪽 계좌 관리-->
+            <StackPanel Grid.Column="0" Margin="5" Orientation="Horizontal" DataContext="{StaticResource people}" Background="BlueViolet">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="0"  Grid.Column="0" Margin="5" Orientation="Horizontal">
+                        <Label>계좌번호(_ID)</Label>
+                        <TextBox Name="labelId" Text= "{Binding Path=Id}"  Width="150">
+                        </TextBox>
+                    </StackPanel>
+                    <StackPanel Grid.Row="0" Grid.Column="1" Margin="5" Orientation="Horizontal">
+                        <Label>사용자이름(_N)</Label>
+                        <TextBox Name="labelaccName" Text="{Binding Path=Name}"  Width="100"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="1" Grid.Column="0" Margin="5" Orientation="Horizontal">
+                        <Label>잔액(_B)</Label>
+                        <TextBox Name="balance"  Width="130" >
+                            <TextBox.Text>
+                                <Binding Path="Balance" NotifyOnValidationError="True">
+                                    <Binding.ValidationRules>
+                                        <!-- <ExceptionValidationRule/>-->
+                                        <local:ShortNumberValidationRule Max="999999999" Min="0"/>
+                                    </Binding.ValidationRules>
+                                </Binding>
+                            </TextBox.Text>
+                        </TextBox>
+                    </StackPanel>
+                    <StackPanel Grid.Row="1" Grid.Column="1" Margin="5" Orientation="Horizontal">
+                        <Label>날짜(_D)</Label>
+                        <!-- <TextBox Name="Date" Text= "{Binding Path= DateTime.Now.ToLongDateString}" Width="Auto"/>-->
+                        <TextBlock Text="{Binding Source={x:Static sys:DateTime.Now}, StringFormat='{}{0:dddd, MMMM dd, yyyy}'}" 
+                                  FontFamily="Segoe UI Black" FontSize="15" />
+                    </StackPanel>
+
+                    <!--등록및 삭제(왼쪽)-->
+                    <StackPanel Grid.Column="0" Grid.Row="2"  Margin="5" Orientation="Horizontal" DataContext="{StaticResource account}">
+                        <Label>계좌번호(_ID)</Label>
+                        <TextBox Name="Id" Text= "{Binding Path=Id }"  Width="150" Height="26" Margin="0,0,0,-0.4" VerticalAlignment="Top">
+                        </TextBox>
+                    </StackPanel>
+                    <StackPanel Grid.Column="1" Grid.Row="2" Margin="5" Orientation="Horizontal" DataContext="{StaticResource account}">
+                        <Label>사용자이름(_N)</Label>
+                        <TextBox Name="accName" Text="{Binding Path=Name}" Width="100"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="2" Grid.Row="2" Margin="5" Orientation="Horizontal" DataContext="{StaticResource account}">
+                        <Label>잔액(_B)</Label>
+                        <TextBox Name="balance1" Text="{Binding Path=Balance}" Width="130">
+                        </TextBox>
+                    </StackPanel>
+                    <StackPanel Grid.Column="0" Grid.Row="3" Margin="2" Orientation="Horizontal">
+                        <Button Name="AddButton" Margin="2" Height="30" Grid.Column="2" Content="추 가" Width="200" Click="AddButton_Click" />
+                    </StackPanel>
+                    <StackPanel Grid.Column="1" Grid.Row="3" Margin="5" Orientation="Horizontal">
+                        <Button Name="RemoveButton" Margin="5" Height="30" Grid.Column="2" Content="삭 제" Width="200" Click="RemoveButton_Click"/>
+                    </StackPanel>
+                </Grid>
+            </StackPanel>
+
+
+            <!--오른쪽 입출금 관리-->
+            <StackPanel Grid.Column="1" Margin="5" Orientation="Horizontal" DataContext="{StaticResource acc_list}" Background="Aqua">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Grid.Row="0"  Grid.Column="0" Margin="5" Orientation="Horizontal">
+                        <Label>계좌번호(_ID)</Label>
+                        <TextBox Name="labelId1" Text= "{Binding Path=Id}"  Width="150">
+                        </TextBox>
+                    </StackPanel>
+                    <StackPanel Grid.Row="0" Grid.Column="1" Margin="5" Orientation="Horizontal">
+                        <Label>입 금(_IN)</Label>
+                        <TextBox Name="labelinput" Text="{Binding Path=Name}"  Width="100"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="0" Grid.Column="2" Margin="5" Orientation="Horizontal">
+                        <Label>출 금(_OUT)</Label>
+                        <TextBox Name="labeloutput" Text="{Binding Path=Name}"  Width="100"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="1" Grid.Column="0" Margin="5" Orientation="Horizontal">
+                        <Label>잔 액:</Label>
+                        <TextBox Name="acciobal" Text="{Binding Path=Bal}" IsReadOnly="True" Width="100" Height="20" Margin="5"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="1" Grid.Column="1" Margin="5" Orientation="Horizontal">
+                        <Label>날짜(_D)</Label>
+                        <!-- <TextBox Name="Date" Text= "{Binding Path= DateTime.Now.ToLongDateString}" Width="Auto"/>-->
+                        <TextBlock Text="{Binding Source={x:Static sys:DateTime.Now}, StringFormat='{}{0:dddd, MMMM dd, yyyy}'}" 
+                                   FontFamily="Segoe UI Black" FontSize="15" />
+                    </StackPanel>
+
+                    <!--오른쪽 입출금TEXT박스, 콤보박스-->
+                    <StackPanel Grid.Row="2" Grid.Column="0" Margin="5" Orientation="Horizontal">
+                        <Label>입금 및 출금 금액 :</Label>
+                        <TextBox Name="money" Width="100">
+                            <TextBox.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                </TransformGroup>
+                            </TextBox.RenderTransform>
+                        </TextBox>
+                    </StackPanel>
+
+                    <ComboBox Name="sortcombo" Grid.Row="2" Grid.Column="1"  SelectionChanged="sortcombo_SelectionChanged">
+                        <ComboBoxItem Content="이름"/>
+                        <ComboBoxItem Content="잔액"/>
+                        <ComboBoxItem Content="계좌번호"/>
+                        <ComboBox.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform />
+                            </TransformGroup>
+                        </ComboBox.RenderTransform>
+                    </ComboBox>
+                    <!--오른쪽 버튼-->
+                    <StackPanel Grid.Row="3" Grid.Column="0" Margin="5" Orientation="Horizontal">
+                        <Button Name="Button1" Margin="5" Height="30" Grid.Column="2" Content="입 금" Width="120" Click="Button1_Click" />
+                    </StackPanel>
+                    <StackPanel Grid.Row="3" Grid.Column="1" Margin="5" Orientation="Horizontal">
+                        <Button Name="Button2" Margin="5" Height="30" Grid.Column="2" Content="출 금" Width="120" Click="Button2_Click" />
+                    </StackPanel>
+                </Grid>
+            </StackPanel>
+            <!--리스트 왼쪽-->
+            <StackPanel Grid.Column="0" Grid.Row="3"  Name="listpanel1" Orientation="Horizontal" Margin="5" Width="480" Height="240" DataContext="{StaticResource people}">
+                <ListBox Name="listbox1" ItemsSource="{Binding}" IsSynchronizedWithCurrentItem="True"/>
+            </StackPanel>
+            <!--리스트 오른쪽-->
+            <StackPanel Grid.Column="1" Grid.Row="3" Orientation="Horizontal" Margin="5" Width="600" Height="240" DataContext="{StaticResource acc_list}">
+                <StackPanel Name="listpanel2" Orientation="Horizontal" Margin="5" Height="275">
+                    <ListBox Name="listbox2" ItemsSource="{Binding Source= {StaticResource acc_list}}" IsSynchronizedWithCurrentItem="True" Width="800">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock> 
+                                        아이디 :        
+                                        <TextBlock Text="{Binding Path=Id}" />       
+                                        , 입금액 :                    
+                                        <TextBlock Text="{Binding Path=Input}" />        
+                                        , 출금액:                       
+                                        <TextBlock Text="{Binding Path=Output}" />   
+                                     , 잔액:                       
+                                        <TextBlock Text="{Binding Path=Balance}" />   
+                                   , 날짜:
+                                    <TextBlock Text="{Binding Source={x:Static sys:DateTime.Now}, StringFormat='{}{0:dddd, MMMM dd, yyyy}'}"/>
+                                </TextBlock>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </StackPanel>
+            </StackPanel>
+
+        </Grid>
+
+    </StackPanel>
+
+</Window>

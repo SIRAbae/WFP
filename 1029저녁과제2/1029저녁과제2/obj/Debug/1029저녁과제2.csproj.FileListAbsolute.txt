@@ -1,0 +1,15 @@
+D:\WPF\1029저녁과제2\1029저녁과제2\bin\Debug\1029저녁과제2.exe.config
+D:\WPF\1029저녁과제2\1029저녁과제2\bin\Debug\1029저녁과제2.exe
+D:\WPF\1029저녁과제2\1029저녁과제2\bin\Debug\1029저녁과제2.pdb
+D:\WPF\1029저녁과제2\1029저녁과제2\obj\Debug\1029저녁과제2.csprojAssemblyReference.cache
+D:\WPF\1029저녁과제2\1029저녁과제2\obj\Debug\MainWindow.g.cs
+D:\WPF\1029저녁과제2\1029저녁과제2\obj\Debug\App.g.cs
+D:\WPF\1029저녁과제2\1029저녁과제2\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\WPF\1029저녁과제2\1029저녁과제2\obj\Debug\1029저녁과제2_MarkupCompile.cache
+D:\WPF\1029저녁과제2\1029저녁과제2\obj\Debug\1029저녁과제2_MarkupCompile.lref
+D:\WPF\1029저녁과제2\1029저녁과제2\obj\Debug\MainWindow.baml
+D:\WPF\1029저녁과제2\1029저녁과제2\obj\Debug\1029저녁과제2.g.resources
+D:\WPF\1029저녁과제2\1029저녁과제2\obj\Debug\_1029저녁과제2.Properties.Resources.resources
+D:\WPF\1029저녁과제2\1029저녁과제2\obj\Debug\1029저녁과제2.csproj.GenerateResource.cache
+D:\WPF\1029저녁과제2\1029저녁과제2\obj\Debug\1029저녁과제2.exe
+D:\WPF\1029저녁과제2\1029저녁과제2\obj\Debug\1029저녁과제2.pdb

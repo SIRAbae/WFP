@@ -1,0 +1,17 @@
+D:\WPF\1028수업연습장\1028수업연습장\bin\Debug\1028수업연습장.exe.config
+D:\WPF\1028수업연습장\1028수업연습장\bin\Debug\1028수업연습장.exe
+D:\WPF\1028수업연습장\1028수업연습장\bin\Debug\1028수업연습장.pdb
+D:\WPF\1028수업연습장\1028수업연습장\obj\Debug\1028수업연습장.csprojAssemblyReference.cache
+D:\WPF\1028수업연습장\1028수업연습장\obj\Debug\MainWindow.g.cs
+D:\WPF\1028수업연습장\1028수업연습장\obj\Debug\Window1.g.cs
+D:\WPF\1028수업연습장\1028수업연습장\obj\Debug\App.g.cs
+D:\WPF\1028수업연습장\1028수업연습장\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\WPF\1028수업연습장\1028수업연습장\obj\Debug\1028수업연습장_MarkupCompile.cache
+D:\WPF\1028수업연습장\1028수업연습장\obj\Debug\1028수업연습장_MarkupCompile.lref
+D:\WPF\1028수업연습장\1028수업연습장\obj\Debug\MainWindow.baml
+D:\WPF\1028수업연습장\1028수업연습장\obj\Debug\Window1.baml
+D:\WPF\1028수업연습장\1028수업연습장\obj\Debug\1028수업연습장.g.resources
+D:\WPF\1028수업연습장\1028수업연습장\obj\Debug\_1028수업연습장.Properties.Resources.resources
+D:\WPF\1028수업연습장\1028수업연습장\obj\Debug\1028수업연습장.csproj.GenerateResource.cache
+D:\WPF\1028수업연습장\1028수업연습장\obj\Debug\1028수업연습장.exe
+D:\WPF\1028수업연습장\1028수업연습장\obj\Debug\1028수업연습장.pdb
