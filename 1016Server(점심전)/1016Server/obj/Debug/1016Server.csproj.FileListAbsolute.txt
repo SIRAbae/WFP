@@ -1,0 +1,9 @@
+D:\고급30기\08_Network\sample\1016Server\1016Server\bin\Debug\1016Server.exe.config
+D:\고급30기\08_Network\sample\1016Server\1016Server\bin\Debug\1016Server.exe
+D:\고급30기\08_Network\sample\1016Server\1016Server\bin\Debug\1016Server.pdb
+D:\고급30기\08_Network\sample\1016Server\1016Server\obj\Debug\_1016Server.Form1.resources
+D:\고급30기\08_Network\sample\1016Server\1016Server\obj\Debug\_1016Server.Properties.Resources.resources
+D:\고급30기\08_Network\sample\1016Server\1016Server\obj\Debug\_1016Server.ServerInfo.resources
+D:\고급30기\08_Network\sample\1016Server\1016Server\obj\Debug\1016Server.csproj.GenerateResource.Cache
+D:\고급30기\08_Network\sample\1016Server\1016Server\obj\Debug\1016Server.exe
+D:\고급30기\08_Network\sample\1016Server\1016Server\obj\Debug\1016Server.pdb
